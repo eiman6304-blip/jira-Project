@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRUM-10: Professional Payment Portal</title>
+    <style>
+        :root { --primary: #4f46e5; --dark: #1f2937; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9fafb; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .pricing-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .price-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 30px; width: 280px; transition: transform 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .price-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .price-card.featured { border: 2px solid var(--primary); position: relative; }
+        .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+        .price-title { font-size: 20px; font-weight: bold; color: var(--dark); }
+        .price-value { font-size: 36px; font-weight: 800; margin: 20px 0; }
+        .price-value span { font-size: 16px; color: #6b7280; font-weight: normal; }
+        .features-list { list-style: none; padding: 0; text-align: left; margin: 20px 0; }
+        .features-list li { margin: 10px 0; color: #4b5563; font-size: 14px; }
+        .features-list li::before { content: "✓"; color: var(--primary); margin-right: 8px; font-weight: bold; }
+        .btn-pay { width: 100%; background: var(--dark); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        .btn-pay:hover { background: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Select Your Plan</h1>
+        <p>Integrated Payment System for Task <b>SCRUM-10</b></p>
+    </div>
+
+    <div class="pricing-container">
+        <div class="price-card">
+            <div class="price-title">Starter</div>
+            <div class="price-value">$19<span>/mo</span></div>
+            <ul class="features-list">
+                <li>Basic Project Tracking</li>
+                <li>Email Support</li>
+                <li>Single User Access</li>
+            </ul>
+            <button class="btn-pay" onclick="alert('Processing Starter Payment...')">Choose Starter</button>
+        </div>
+
+        <div class="price-card featured">
+            <div class="badge">Most Popular</div>
+            <div class="price-title">Professional</div>
+            <div class="price-value">$49<span>/mo</span></div>
+            <ul class="features-list">
+                <li>Advanced Dashboard</li>
+                <li>Priority 24/7 Support</li>
+                <li>Up to 10 Team Members</li>
+                <li>Cloud Integration</li>
+            </ul>
+            <button class="btn-pay" style="background: var(--primary);" onclick="alert('Redirecting to Secure Gateway...')">Choose Pro</button>
+        </div>
+
+        <div class="price-card">
+            <div class="price-title">Enterprise</div>
+            <div class="price-value">$99<span>/mo</span></div>
+            <ul class="features-list">
+                <li>Custom Solutions</li>
+                <li>Dedicated Manager</li>
+                <li>Unlimited Access</li>
+            </ul>
+            <button class="btn-pay" onclick="alert('Contacting Sales Team...')">Contact Us</button>
+        </div>
+    </div>
+
+</body>
+</html>
